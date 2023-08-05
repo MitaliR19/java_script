@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script type="text/javascript" language="javascript">
+    function btnReverse_Click()
+    {
+        var n,b;
+        n = parseInt(document.getElementById("txtSup").value);
+        b = onBinary(n);
+        document.getElementById("result").innerHTML=b;
+
+
+
+        function onBinary(n)
+        {
+            var bin="";
+            var bit;
+            while(n>0)
+            {
+                bit = n%2;
+                bin = bit.toString()+bin;
+                n = parseInt(n/2);
+                
+            }
+            return bin;
+
+        }
+    }
+
+</script>
+
+<body>
+    <form name="frm1" id="frm1" method="post" align="center">
+        <table align="center">
+
+            <tr>
+            <td><b>ENTER a number::</b></td>
+            <td><input id="txtSup" name="txtSup" type="text" ></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input onclick="btnReverse_Click()" type="button" value="CLICK" id="btndone" name="btndone">
+                </td>
+            </tr>
+        </table>
+    </form>
+    <h2 id="result" align="center"></h2>
+</body>
+</html>
