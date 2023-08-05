@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" language="javascript">
+        function btnSum_Click()
+        {
+            var fn, sn, sum;
+            fn = parseInt(document.frm1.txtFirstNum.value);
+            sn = parseInt(document.frm1.txtSecondNum.value);
+            sum = fn+sn;
+            
+            document.getElementById("results").innerHTML=sum;
+        }
+        function btnSub_Click()
+        {
+            var fn1, sn1, sub;
+            fn1 = parseInt(document.frm1.txtFirstNum.value);
+            sn1 = parseInt(document.frm1.txtSecondNum.value);
+            sub = fn1-sn1;
+            document.getElementById("results").innerHTML=sub;
+        }
+        function btnMul_Click()
+        {
+            var fn1, sn1, mult;
+            fn1 = parseInt(document.frm1.txtFirstNum.value);
+            sn1 = parseInt(document.frm1.txtSecondNum.value);
+            mult = fn1*sn1;
+            document.getElementById("results").innerHTML=mult;
+        }
+        function btnDiv_Click()
+        {
+            var fn1, sn1, div;
+            fn1 = parseFloat(document.frm1.txtFirstNum.value);
+            sn1 = parseFloat(document.frm1.txtSecondNum.value);
+            div = fn1/sn1;
+            document.getElementById("results").innerHTML=div;
+        }
+
+    </script>
+    <style>
+        .hero{
+            background-color: black;
+            color: white;
+            margin-left: 300px;
+            border-radius: 30px;
+            align-items: center;
+            border: 10px solid green;
+        }
+        input{
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <div style="margin:200px" class="hero">
+        <h2 align="center">CALCULATOR</h2>
+        <form name="frm1" id="frm1" method="post" align="center">
+            <table>
+
+                <tr>
+                <td><b>ENTER FIRST NUMBER::</b></td>
+                <td><input id="txtFirstNum" name="txtFirstNum" type="text"></td>
+                </tr>
+                <tr>
+                    <td><b>ENTER SECOND NUMBER::</b></td>
+                    <td><input id="txtSecondNum" name="txtSecondNum" type="text"></td>
+                </tr>
+                <tr>
+                    <td><b>Calculate</b></td>
+                    <td id="results">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input onclick="btnSum_Click()" type="button" value="ADD" id="btnSum" name="btnSum">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input onclick="btnSub_Click()" type="button" value="SUBTRACT" id="btnSub" name="btnSub">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input onclick="btnMul_Click()" type="button" value="MULTIPLY" id="btnMul" name="btnMul">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input onclick="btnDiv_Click()" type="button" value="DIVIDE" id="btnDiv" name="btnDiv">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>
