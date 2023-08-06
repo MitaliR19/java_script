@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <script type="text/javascript" language="javascript">
+    function btndone_Click(){
+        var a= parseInt(document.getElementById("txtnum1").value);
+        var b= parseInt(document.getElementById("txtnum2").value);
+        var min = (a > b) ? a : b;
+        while (true) {
+        if (min % a == 0 && min % b == 0) {
+        document.getElementById("result1").innerHTML="LCM of the number -> "+min;
+
+        break;
+    }
+    min++;
+    }
+    var m = a*b;
+    var hcf = (a*b)/min;
+    document.getElementById("result2").innerHTML="Hcf of the number -> "+hcf;
+
+    }
+
+    </script>
+</head>
+<body>
+    <div style="margin:200px" class="hero">
+        <h2 align="center">Play With Number</h2>
+        <form name="frm1" id="frm1" method="post" align="center">
+            <table>
+
+                <tr>
+                <td><b>ENTER first NUMBER::</b></td>
+                <td><input id="txtnum1" name="txtnum" type="text"></td>
+                </tr>
+                <tr>
+                    <td><b>ENTER second NUMBER::</b></td>
+                    <td><input id="txtnum2" name="txtnum" type="text"></td>
+                    </tr>
+                <tr>
+                    <tr>
+                        <td colspan="2">
+                            <input onclick="btndone_Click()" type="button" value="SUBMIT" id="btndone" name="btndone">
+                        </td>
+                    </tr>
+                </table>
+            </form>
+            <h2 id="result1"></h2>
+            <h2 id="result2"></h2>
+</body>
+</html>
