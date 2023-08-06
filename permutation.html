@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script type="text/javascript" language="javascript">
+    function btndone_Click()
+    {
+        var a,b,c,i,j,e;
+        var m=1;
+        var d=1;
+        a=parseInt(document.getElementById("txtSup").value);
+        b=parseInt(document.getElementById("txtSub").value);
+        c=a-b;
+        document.getElementById("result").innerHTML="permutatin is::"+permutation();
+        document.getElementById("result1").innerHTML="combination is::"+combination();
+
+
+        function permutation()
+        {
+        for(i=a; i>=c+1; i--)
+        
+        {
+            m=m*i;
+        }
+        return m;
+        }
+        function combination()
+        {
+        
+        for(j=b; j>=1; j--)
+        {
+            d=d*j;
+        }
+        e=m/d;
+        return e;
+        }
+        }
+</script>
+<body>
+    <h2 align="center"><u>Permutation & Combination</u></h2>
+    <h2 align="center"><b><sup>n</sup>P<sub>r</sub>=n!/(n-r)!</b></h2>
+    <h2 align="center"><b><sup>n</sup>C<sub>r</sub>=n!/(n-r)!*r!</b></h2>
+
+    <form name="frm1" id="frm1" method="post" align="center">
+        <table align="center">
+
+            <tr>
+            <td><b>ENTER value of n::</b></td>
+            <td><input id="txtSup" name="txtSup" type="text" ></td>
+            </tr>
+            <tr>
+                <td><b>ENTER value of r::</b></td>
+                <td><input id="txtSub" name="txtSub" type="text" ></td>
+                </tr>
+            <tr>
+                <tr>
+                    <td colspan="2">
+                        <input onclick="btndone_Click()" type="button" value="CLICK" id="btndone" name="btndone">
+                    </td>
+                </tr>
+            </table>
+        </form>
+        <h2 id="result" align="center"></h2>
+        <h2 id="result1" align="center"></h2>
+
+</body>
+</html>
