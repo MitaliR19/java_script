@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" language="javascript">
+
+    function btnReverse_Click()
+    {
+        var a,b;
+        a = parseInt(document.getElementById("txtSup").value);
+        b = onReverse(a);
+        document.getElementById("result").innerHTML=b;
+        function onReverse(x){
+            var s=0;
+            while(x!==0)
+            {
+                s=s*10+x%10;
+                x=Math.floor(x/10);
+            }
+            return s;
+        }
+    }
+
+
+        </script>
+
+</head>
+<body>
+    <form name="frm1" id="frm1" method="post" align="center">
+        <table align="center">
+
+            <tr>
+            <td><b>ENTER a number::</b></td>
+            <td><input id="txtSup" name="txtSup" type="text" ></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input onclick="btnReverse_Click()" type="button" value="CLICK" id="btndone" name="btndone">
+                </td>
+            </tr>
+        </table>
+    </form>
+    <h2 id="result" align="center"></h2>
+
+</body>
+</html>
