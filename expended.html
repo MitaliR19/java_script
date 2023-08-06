@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" language="javascript">
+        function btnRev_Click(){
+        var n, n1,n2,n3, n4,n5;
+        n = parseInt(document.frm1.txtnum.value);
+        n1 = parseInt(n/100);
+        n2 = parseInt(n%100);
+        n3 = parseInt(n2/10);
+        n4 = n2%10;
+        n5 = parseInt(n4*100) + (n3*10) + n1;
+        document.getElementById("result").innerHTML=n5;
+        document.getElementById("results").innerHTML=n4+"*100 +"+ n3 +"*10 +"+ n1;
+        
+        }
+    </script>
+</head>
+<body>
+    <div style="margin:200px" class="hero">
+        <h2 align="center">Play With Number</h2>
+        <form name="frm1" id="frm1" method="post" align="center">
+            <table>
+
+                <tr>
+                <td><b>ENTER 3 digit NUMBER::</b></td>
+                <td><input id="txtnum" name="txtnum" type="text"></td>
+                </tr>
+                
+                <tr>
+                    <td colspan="2">
+                        <input onclick="btnRev_Click()" type="button" value="SUBMIT" id="btnRev" name="btnRev">
+                    </td>
+                </tr>
+               
+
+                </table>
+        </form>
+
+        <h2 id="result"></h2>
+        <h2 id="results"></h2>
+</body>
+</html>
